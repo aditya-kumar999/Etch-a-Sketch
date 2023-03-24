@@ -1,10 +1,11 @@
 .container {
-    display: grid;
-    grid-template-columns: repeat(16,83.5px);
-    grid-template-rows: repeat(16,75px);
-    
+    display: flex;
+    flex-wrap: wrap;
+    border: 10px solid gray;
+    width: 600px;
+    height: 600px;
 }
 
 .grid-items {
-    border: 1px solid black;
+    flex: 1 1 37px;
 }
