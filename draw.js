@@ -12,6 +12,12 @@ size.addEventListener('click',()=>{
 
 });
 
+const random = document.querySelector('.Random');
+random.addEventListener('click',()=>{
+    gridItems.forEach(item => item.addEventListener('mouseenter',()=>{
+    item.style.background = `rgb(${Math.floor(Math.random()*256)} ${Math.floor(Math.random()*256)} ${Math.floor(Math.random()*256)})`;
+}))});
+
 function createGrid(n){
     for(let i=0;i<(n*n);i++){
         const grid = document.createElement('div');
@@ -25,6 +31,5 @@ function createGrid(n){
     gridItems.forEach(item => item.addEventListener('mouseenter',()=>{
     item.classList.add('blackBack');
     }) );
-
 };
 
